@@ -54,7 +54,9 @@
 - **«1С:Торговля и склад».** Тоже работает в файловом режиме. В этой программе ведут учёт товарно-материальных ценностей (ТМЦ).
 - **Физический сервер с Microsoft Windows Server 2022.** На нём настроены Active Directory, DNS, DHCP, LDAP, файловый сервер, Exchange Mail Server. ККМ связаны с сервером через TCP/IP и компоненту 1С по технологии OLE.
 
-Диаграмма с архитектурой системы в модели C4:
+
+[Диаграмма](medicamente-c4-container-diagram.drawio) с архитектурой системы в модели C4:
+![medicamente-c4-container-diagram.png](medicamente-c4-container-diagram.png)
 
 ## Принципы работы с данными
 
