@@ -1,0 +1,119 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="DFD - Приём пациента" id="dfd-visit">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="process1" value="1.0&lt;br&gt;Проведение&lt;br&gt;приёма&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[RBAC, Аудит]&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="250" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process2" value="2.0&lt;br&gt;Заполнение&lt;br&gt;медицинской карты&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[RBAC, Аудит]&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="450" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process3" value="3.0&lt;br&gt;Назначение анализов&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[Шифрование, Тегирование,&lt;br&gt;RBAC, Аудит]&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" value="Медицинские&lt;br&gt;данные: жалобы,&lt;br&gt;симптомы&lt;div&gt;[TLS]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82B366;fillColor=#ffe6cc;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="rKJ0IIt3k5VB8wuyWuGO-14" target="process1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="100" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow2" value="Чтение истории&lt;br&gt;болезни&lt;div&gt;[RBAC, Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82B366;fillColor=#ffe6cc;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="rKJ0IIt3k5VB8wuyWuGO-7" target="process1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="450" as="sourcePoint" />
+            <mxPoint x="400" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="850" y="390" />
+              <mxPoint x="540" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow3" value="Проверка&amp;nbsp;&lt;div&gt;записи&lt;/div&gt;&lt;div&gt;[RBAC, Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="rKJ0IIt3k5VB8wuyWuGO-11" target="process1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="130" as="sourcePoint" />
+            <mxPoint x="550" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow4" value="Диагноз,&lt;br&gt;рекомендации&lt;div&gt;[Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=0;strokeColor=#82B366;fillColor=#ffe6cc;" parent="1" source="process1" target="process2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="475" y="370" as="sourcePoint" />
+            <mxPoint x="475" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow5" value="Сохранение&lt;br&gt;медицинской карты:&lt;br&gt;диагноз, лечение&lt;div&gt;[AIP, Тегирование,&lt;br&gt;RBAC, Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82B366;fillColor=#ffe6cc;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="process2" target="rKJ0IIt3k5VB8wuyWuGO-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="320" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow6" value="Назначение&lt;div&gt;анализов&lt;/div&gt;&lt;div&gt;[Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=0;strokeColor=#82B366;fillColor=#ffe6cc;" parent="1" source="process2" target="process3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="490" as="sourcePoint" />
+            <mxPoint x="475" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow7" value="Запись в реестр:&lt;br&gt;ФИО, тип анализа&lt;div&gt;[Шифрование, Тегирование,&lt;br&gt;RBAC, Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82B366;fillColor=#ffe6cc;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="process3" target="rKJ0IIt3k5VB8wuyWuGO-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="545" y="690" as="sourcePoint" />
+            <mxPoint x="595" y="690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow8" value="Ведение&lt;div&gt;приёма&lt;/div&gt;&lt;div&gt;[RBAC, Аудит]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=0;strokeColor=#82b366;fillColor=#d5e8d4;" parent="1" source="rKJ0IIt3k5VB8wuyWuGO-9" target="process1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="420" as="sourcePoint" />
+            <mxPoint x="550" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow9" value="Заключение&lt;div&gt;[TLS]&lt;/div&gt;" style="endArrow=block;endSize=8;html=1;rounded=1;strokeColor=#82B366;fillColor=#ffe6cc;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" source="process2" target="rKJ0IIt3k5VB8wuyWuGO-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="475" y="410" as="sourcePoint" />
+            <mxPoint x="100" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-9" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Врач&lt;/span&gt;" style="html=1;dashed=0;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="800" y="265" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-14" value="Пациент" style="html=1;dashed=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="20" y="360" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="F5hHyGp6BusWcE1Zbymv-1" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="800" y="440" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-7" value="D2" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeColor=#82B366;" parent="F5hHyGp6BusWcE1Zbymv-1" vertex="1">
+          <mxGeometry width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-8" value="Папка с файлами пациентов&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;[AIP, BitLocker,&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;RBAC, Тегирование,&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;Аудит]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="F5hHyGp6BusWcE1Zbymv-1" vertex="1">
+          <mxGeometry x="40" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="F5hHyGp6BusWcE1Zbymv-2" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="800" y="640" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-3" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeColor=#82B366;" parent="F5hHyGp6BusWcE1Zbymv-2" vertex="1">
+          <mxGeometry width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-4" value="&lt;span style=&quot;text-align: center;&quot;&gt;Реестр анализов&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;(Excel)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;[AIP, BitLocker,&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;RBAC, Тегирование,&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;Аудит]&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="F5hHyGp6BusWcE1Zbymv-2" vertex="1">
+          <mxGeometry x="40" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="YkKtno00U9DDIZgIafbi-1" value="&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Легенда мер защиты:&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;🔒 TLS - Шифрование при передаче&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;🔐 BitLocker/AIP - Шифрование на диске&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;👤 RBAC - Контроль доступа на основе ролей&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;🏷️ Тегирование - Классификация данных&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;📋 Аудит - Логирование операций&lt;/span&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="640" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jlvEuNHHLXZEEFekYHmy-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="370" y="40" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-11" value="D3" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeColor=#82B366;" parent="jlvEuNHHLXZEEFekYHmy-1" vertex="1">
+          <mxGeometry width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rKJ0IIt3k5VB8wuyWuGO-12" value="&lt;span style=&quot;text-align: center;&quot;&gt;Журнал записей&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;к врачу (Excel)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;[BitLocker,&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;RBAC, Аудит]&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="jlvEuNHHLXZEEFekYHmy-1" vertex="1">
+          <mxGeometry x="40" width="170" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
